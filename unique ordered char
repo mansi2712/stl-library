@@ -1,0 +1,22 @@
+//maintain an ordered list of unique charaters
+#include<iostream>
+#include<vector>
+#include<set>
+using namespace std;
+int main()
+{
+	vector <char> str;
+	set <char> s1;
+	char s;
+	cin>>s;
+	while(s!=46)
+	{
+		cin>>s;
+		str.push_back(s);
+		s1.insert(s);
+	}
+	set <char> :: iterator it;
+	for(it=s1.begin();it!=s1.end();it++)
+		cout<<*it;
+	return 0;
+}
