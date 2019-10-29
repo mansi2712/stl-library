@@ -1,0 +1,23 @@
+//keep only unique occuring char without sorting them
+#include<iostream>
+#include<vector>
+#include<set>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	vector <char> str;
+	char s;
+	vector <char> :: iterator it;
+	cin>>s;
+	while(s!=46)
+	{
+		it=find(str.begin(),str.end(),s);
+		if(it==str.end())
+			str.push_back(s);
+		cin>>s;
+	}
+	for(it=str.begin();it!=str.end();it++)
+		cout<<*it;
+	return 0;
+}
