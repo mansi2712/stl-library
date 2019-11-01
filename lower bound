@@ -1,0 +1,32 @@
+//find if a given no exist in a vector and its index, if no does not exist, find lower bound
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {  
+    int n,a;
+    int q,b;
+    int c;
+    vector <int> v;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a;
+        v.push_back(a);
+    }
+    cin>>q;
+    for(int i=0;i<q;i++)
+    {
+        cin>>b;
+        c=lower_bound(v.begin(),v.end(),b)-v.begin();
+        if(b==v[c])
+            cout<<"Yes "<<c+1<<endl;
+        else
+            cout<<"No "<<c+1<<endl;
+    }
+    return 0;
+}
